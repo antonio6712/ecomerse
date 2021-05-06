@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjeta</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- Carousel -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="navigation">
+        <div class="container">
+          <nav class="nav">
+            <div class="nav__hamburger">
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-menu"></use>
+              </svg>
+            </div>
+
+            <div class="nav__logo">
+              <a href="/" class="scroll-link"> NENIS </a>
+            </div>
+
+            <div class="nav__icons">
+              <a href="#" class="icon__item">
+                <svg class="icon__user">
+                  <use xlink:href="./images/sprite.svg#icon-user"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="icon__item">
+                <svg class="icon__search">
+                  <use xlink:href="./images/sprite.svg#icon-search"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="icon__item">
+                <svg class="icon__cart">
+                  <use
+                    xlink:href="./images/sprite.svg#icon-shopping-basket"
+                  ></use>
+                </svg>
+                <span id="cart__total">4</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="page__title-area">
+        <div class="container">
+          <div class="page__title-container">
+            <ul class="page__titles">
+              <li>
+                <a href="/">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-home"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page__title">Pago</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <form class="cart__form">
+      <div class="cart__totals">
+        <h3>Datos del usuario</h3>
+        <ul>
+          <li>
+            Nombre completo
+            <span><input type="text" value="" /></span>
+          </li>
+          <li>
+            Direccion
+            <span><input type="text" /></span>
+          </li>
+        </ul>
+
+        <h3>Datos Bancarios</h3>
+        <ul>
+          <li>
+            Sucursal bancaria
+            <span>
+              <select name="" id="">
+                <option value="">Bancomer</option>
+                <option value="">Banorte</option>
+                <option value="">Scotiabank</option>
+              </select>
+            </span>
+          </li>
+          <li>
+            Total
+            <span class="new__price">$250.99</span>
+          </li>
+          <li>
+            No. Tarjeta
+            <span><input type="text"></span>
+          </li>
+          <li>
+              Fecha de vigencia
+              <span><input type="text"></span>
+          </li>
+          <li>
+              CVV
+              <span><input type="text"></span>
+          </li>
+        </ul>
+
+        <a href="index.html" onclick="return pago()">Pagar</a>
+      </div>
+    </form>
+    <br /><br />
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer-top__box">
+            <h3>EXTRAS</h3>
+            <a href="#">Marcas</a>
+            <a href="#">Certificados de Regalo</a>
+            <a href="#">Afiliados</a>
+            <a href="#">Especiales</a>
+            <a href="#">Mapa del Sitio</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>INFORMACIÓN</h3>
+            <a href="#">Acerca de Nosotros</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Terminos & Condiciones</a>
+            <a href="#">Contáctanos</a>
+            <a href="#">Mapa del Sitio</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>MI CUENTA</h3>
+            <a href="#">Mi Cuenta</a>
+            <a href="#">Historial de Pedidosy</a>
+            <a href="#">Lista de Deseos</a>
+            <a href="#">Boletin Informativo</a>
+            <a href="#">Regresos</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>CONTÁCTANOS</h3>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-location"></use>
+                </svg>
+              </span>
+              Av. Instituto Tecnológico S/N, Crucero del Cayaco 39800 Acapulco
+              de Juárez, México
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+                </svg>
+              </span>
+              sis.info.qschool@gmail.com
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+              000-0000-0000
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+                </svg>
+              </span>
+              Acapulco Guerrero, México
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer-bottom__box"></div>
+        <div class="footer-bottom__box"></div>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+
+    <!-- Go To -->
+
+    <a href="#header" class="goto-top scroll-link">
+      <svg>
+        <use xlink:href="./images/sprite.svg#icon-arrow-up"></use>
+      </svg>
+    </a>
+
+    <!-- Glide Carousel Script -->
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/products.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/tarjeta.js"></script>
+  </body>
+</html>
